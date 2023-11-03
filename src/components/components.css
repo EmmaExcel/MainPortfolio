@@ -198,6 +198,7 @@
   flex-direction: column;
   gap: 60px;
   padding: 100px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.408);
 }
 
 .skill {
@@ -292,6 +293,90 @@
   color: #b3b3b3;
 }
 
+.contactSection{
+    height: 100%;
+    width: 100%;
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+    gap: 25px;
+}
+
+
+.contactHeader p{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.contactInfo{
+    width: 50%;
+}
+
+.contactInfo p{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.contactMail a{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    transition: 0.5s ease-in ;
+    -webkit-transition: 0.5s ease-in ;
+    -moz-transition: 0.5s ease-in ;
+    -ms-transition: 0.5s ease-in ;
+    -o-transition: 0.5s ease-in ;
+    text-decoration: none;
+}
+.contactMail a:hover{
+color: white ;
+ transition: 0.5s ease-in ;
+    -webkit-transition: 0.5s ease-in ;
+    -moz-transition: 0.5s ease-in ;
+    -ms-transition: 0.5s ease-in ;
+    -o-transition: 0.5s ease-in ;
+}
+
+.contactFooter{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contactName p{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+}
+
+.contactLink{
+    display: flex;
+    gap: 20px;
+}
+
+.contactLink a{
+    font-size: 16px ;
+    line-height: 19px;
+    color: #b3b3b3;
+    text-decoration: none;
+
+}
+
+.contactLink a:hover{
+    color: white ;
+     transition: 0.5s ease-in ;
+        -webkit-transition: 0.5s ease-in ;
+        -moz-transition: 0.5s ease-in ;
+        -ms-transition: 0.5s ease-in ;
+        -o-transition: 0.5s ease-in ;
+    }
 
 
 @media (width < 780px) {
@@ -509,6 +594,19 @@
       line-height: 22px;
       font-weight: 400;
   }
+
+  .contactInfo{
+    width: 100%;
+}
+
+
+  .contactFooter{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: unset;
+}
 }
 
 @media (780px <= width <= 960px) {
@@ -762,4 +860,9 @@
       line-height: 22px;
       font-weight: 400;
   }
+
+  .contactInfo{
+    width: 70%;
+}
+
 }

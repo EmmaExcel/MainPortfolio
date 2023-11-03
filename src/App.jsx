@@ -1,5 +1,6 @@
 import "./App.css";
 import { About } from "./components/About";
+import { Contact } from "./components/Contact";
 import { Services } from "./components/Services";
 import { Works } from "./components/Works";
 import { Parallax } from "./components/parallax/parallax";
@@ -15,6 +16,7 @@ function App() {
           <Parallax/>
           <About/>
           <Services/>
+          <Contact/>
         </div>
       </section>
     </>

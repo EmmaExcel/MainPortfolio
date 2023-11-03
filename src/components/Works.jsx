@@ -17,7 +17,7 @@ export const Works = () => {
 
   return (
     <>
-      <section className="workSection">
+      <section id="works" className="workSection">
         <div className="workContainer">
           <div className="workHeader">
             <p>SELECTED WORKS</p>
