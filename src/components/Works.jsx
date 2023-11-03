@@ -1,20 +1,10 @@
 import { AiOutlineEye } from "react-icons/ai";
-import "./components.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { data } from "./Project-data";
+import { Link } from "react-router-dom";
+import { data } from './Project-data';
 
 export const Works = () => {
-  const [hover, setHover] = useState(false);
-
-  const Mouseenter = () => {
-    setHover(true);
-  };
-
-  const Mouseleave = () => {
-    setHover(false); // Corrected from "flase" to "false"
-  };
-
   return (
     <>
       <section id="works" className="workSection">
@@ -25,21 +15,9 @@ export const Works = () => {
           </div>
 
           <div className="workListContainer">
-           {
-            data.map((index)=>(
-              <WorkBox
-              key={index.id}
-              id={index.id}
-              title={index.title}
-              path={index.path}
-              img={index.img}
-              hover={hover}
-              Mouseenter={Mouseenter}
-              Mouseleave={Mouseleave}
-            />
-            ))
-           }
-            
+            {data.map((work) => (
+              <WorkBox key={work.id} work={work} id={work.id} img={work.img} title={work.title} />
+            ))}
           </div>
         </div>
       </section>
@@ -47,10 +25,20 @@ export const Works = () => {
   );
 };
 
-const WorkBox = ({ hover, Mouseleave, Mouseenter,img,path,title,id }) => {
- 
+const WorkBox = ({ id, work, img , title  }) => {
+  const [hover, setHover] = useState(false);
+
+  const Mouseenter = () => {
+    setHover(true);
+  };
+
+  const Mouseleave = () => {
+    setHover(false);
+  };
+
   return (
     <motion.div
+      key={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -61,17 +49,13 @@ const WorkBox = ({ hover, Mouseleave, Mouseenter,img,path,title,id }) => {
       }}
       className="workBoxContainer"
     >
-      <div
-        className="workBox"
-        onMouseEnter={Mouseenter}
-        onMouseLeave={Mouseleave}
-      >
+      <div className="workBox" onMouseEnter={Mouseenter} onMouseLeave={Mouseleave}>
         <img src={img} alt="" />
         {hover && (
-          <div className="view">
+          <Link to={`/projectdetail/${id}`} className="view">
             <AiOutlineEye />
             <p>VIEW PROJECT</p>
-          </div>
+          </Link>
         )}
       </div>
 

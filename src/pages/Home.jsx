@@ -1,10 +1,9 @@
-import { Navbar } from "../Components/Navbar";
+
 import { motion } from "framer-motion";
 export const Home = () => {
   return (
     <>
       <section className="homeSection">
-        <Navbar />
         <div className="homeContainer">
           
             <motion.p
