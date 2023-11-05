@@ -5,7 +5,7 @@ export const Navbar = () => {
     <>
       <div className="navContainer">
         <div className="navText">
-          <a href="#home">EXCEL®</a>
+          <a href="/">EXCEL®</a>
           <p>PORTFOLIO 2023</p>
         </div>
         <div className="navLink">

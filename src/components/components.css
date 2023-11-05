@@ -142,7 +142,7 @@
 }
 
 .view:hover{
-  backdrop-filter: blur(3px);
+ 
   scale: 1.035;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
@@ -293,7 +293,7 @@
     justify-content: space-between;
     width: 60%;
     gap: 50px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+    border-bottom:unset;
     padding: 5px 0;
     
 }
@@ -548,7 +548,7 @@ color: white ;
 .projectImage img{
   height: 120vh;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .Projectnav{
@@ -798,7 +798,7 @@ color: white ;
       justify-content: space-between;
       width: 95%;
       gap: 20px;
-      border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+      border-bottom:unset;
       padding: 5px 0;
       
   }
@@ -880,10 +880,11 @@ color: white ;
   width: 100%;
   justify-content: unset;
   padding-bottom:10px ;
+  gap: 10px;
 }
 
 .projectHeader p{
-  font-size: 50px;
+  font-size: 45px;
   line-height: 50px;
   font-weight: 600;
   text-transform: uppercase;
@@ -899,7 +900,7 @@ color: white ;
 }
 
 .projectHeader a{
-  font-size: 12px;
+  font-size: 10px;
   line-height: 24px;
   font-weight: 500;
   color: #b3b3b3;
@@ -908,8 +909,6 @@ color: white ;
   border-bottom: 1px solid rgba(0, 128, 255, 0.492);
   transition: 0.4s ease;
   height: 100%;
-
- 
 }
 
 .projectHeader a:hover{
@@ -1050,7 +1049,7 @@ color: white ;
   transition: 0.5s ease;
 }
 .navButton p:nth-child(2):hover{
-  font-size: 16px ;
+  font-size: 14px ;
   line-height:19px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.785) ;
@@ -1060,8 +1059,6 @@ color: white ;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
 }
-
-
 
 }
 
@@ -1306,7 +1303,7 @@ color: white ;
       justify-content: space-between;
       width: 60%;
       gap: 50px;
-      border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+      border-bottom:unset;
       padding: 5px 0;
       
   }

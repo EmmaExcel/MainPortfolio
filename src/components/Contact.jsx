@@ -25,9 +25,9 @@ export const Contact = () => {
                     </div>
 
                     <div className="contactLink">
-                        <a href="">GITHUB</a>
-                        <a href="">TWITTER</a>
-                        <a href="">LINKEDIN</a>
+                        <a href="https://github.com/EmmaExcel">GITHUB</a>
+                        <a href="https://twitter.com/Oppai_senpai6">TWITTER</a>
+                        <a href="www.linkedin.com/in/excel-emma-457b61201">LINKEDIN</a>
                     </div>
                 </div>
             </div>

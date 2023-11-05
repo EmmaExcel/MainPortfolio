@@ -18,7 +18,7 @@ export const ProjectDetail = () => {
           <p>{project.title}</p>
           <div className="projectHeadLink">
             <a href={project.path}>FULL CASE STUDY</a>
-            <a href="">GITHUB</a>
+            <a href={project.github}>GITHUB</a>
           </div>
         </div>
 
