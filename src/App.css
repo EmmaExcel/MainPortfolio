@@ -86,7 +86,45 @@ body {
   line-height: 25px;
 }
 
-@media (width < 780px) {
+@media (width <= 400px) {
+  .homeContainer {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.114);
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .hometextone {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 48px;
+    color: white;
+    width: auto;
+  }
+
+  .hometexttwo p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    width: 90%;
+  }
+
+  .hometextthree{
+    width: 90%;
+  }
+
+  .hometexthree p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    
+  }
+}
+
+@media (400px <= width <= 780px) {
   .homeContainer {
     height: 100%;
     width: auto;
