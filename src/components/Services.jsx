@@ -13,7 +13,7 @@ export const Services = () => {
    
     {
       id: 3,
-      name: "Gatsby",
+      name: "Astro.",
     },
     {
       id: 4,

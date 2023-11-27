@@ -34,8 +34,8 @@ export const data=[
         path:'https://rumeemmaokerhe.netlify.app/',
         img:"https://framerusercontent.com/images/K6UfzS2SSz2uYkSu06kr2rzAKM.png?scale-down-to=512",
         programs: 'REACT JS,CSS',
-        desc: "An Ecommerce website showing minimalistic and refined branding for a wellness retreat, conveying tranquility and well-being through design elements.",
-        year:2023,
+        desc: "A dynamic Author Portfolio and Blog website for RUME, presenting her literary works and insights. Designed a user-friendly interface that seamlessly integrates RUME's books, fostering a connection with readers. Spearheaded frontend development, ensuring a visually appealing and responsive design to highlight literary achievements. Integrated features for displaying RUME's book collection and creating a blog space for sharing thoughts and insights. Utilized React.js for the development.",
+        year:2022,
         type:"Website",
         github:"https://github.com/EmmaExcel/RumeWebsite",
         detailImage:[
@@ -70,8 +70,8 @@ export const data=[
         img:"https://framerusercontent.com/images/sI86f4FEhNKDIMPcoV3cwF1pg.png",
         path:'https://jtspicyv2.netlify.app/',
         programs: 'REACT JS,CSS,SWIPERJS',
-        desc: "An Ecommerce website showing minimalistic and refined branding for a wellness retreat, conveying tranquility and well-being through design elements.",
-        year:2023,
+        desc: "Revamped the JTSPICY portfolio website with a keen focus on elevating visual aesthetics and user interface, informed by thorough analysis of user feedback and industry trends. Executed a frontend redesign, emphasizing visual appeal and responsiveness, while closely collaborating with Chef JTSPICY to align with the evolving brand. Utilized React.js and the React Timeline component for a seamless and improved user experience.        ",
+        year:2021,
         type:"Website",
         github:"https://github.com/EmmaExcel/jtspicy-v2",
         detailImage:[
@@ -99,8 +99,8 @@ export const data=[
         path:'https://jtspicy.netlify.app/',
         programs: 'REACT JS,CSS,SWIPERJS',
         img:"https://framerusercontent.com/images/BIVYgWTaEIjtTEqVWPtzvNOk8k8.png?scale-down-to=1024",
-        desc: "An Ecommerce website showing minimalistic and refined branding for a wellness retreat, conveying tranquility and well-being through design elements.",
-        year:2023,
+        desc: " Crafted an immersive portfolio website for Chef JTSPICY, prioritizing frontend development with React.js. Led the creation of an intuitive user interface and integrated the React Timeline component to showcase the chef's professional journey and culinary achievements seamlessly. The visually captivating site provides an interactive experience, highlighting the chef's culinary mastery and accomplishments.        ",
+        year:2021,
         type:"Website",
         github:"https://github.com/EmmaExcel/jtspicy-v1",
         detailImage:[
@@ -155,33 +155,33 @@ export const data=[
     
     {   
         id:6,
-        title:'Travel',
-        path:'https://travel20.netlify.app',
-        programs: 'REACT JS, FRAMER',
-        img:"https://framerusercontent.com/images/6Jb2jr3gjWUnXspzoCNMuxwkRV8.png",
-        desc: "An Ecommerce website showing minimalistic and refined branding for a wellness retreat, conveying tranquility and well-being through design elements.",
+        title:'Structura',
+        path:'https://structura.vercel.app/',
+        programs: 'REACT JS, CSS, FRAMER',
+        img:"https://framerusercontent.com/images/RGGWoF0v0bipS9MRA5yNeVX6IOo.png",
+        desc: "A dynamic portfolio for a team of exceptional civil engineers. Leveraged the power of vite , weaving in the elegance of Swiper.js & Framer motion for a delightful user experience.",
         year:2023,
         type:"Website",
         github:"https://github.com/EmmaExcel/Travel2.0",
         detailImage:[
             {
                 id:1,
-                imgUrl:"https://framerusercontent.com/images/WyyxDVx2SUbfh2RNqfSw3GLvBQ.png",
+                imgUrl:"https://framerusercontent.com/images/RGGWoF0v0bipS9MRA5yNeVX6IOo.png",
 
             },
             {
                 id:2,
-                imgUrl:"https://framerusercontent.com/images/kbk0MAEIi3IyFESEq4gbGBZoGA.png",
+                imgUrl:"https://framerusercontent.com/images/gJSY14rM6txjgtDwKxxDMeoQ.png",
 
             },
             {
                 id:3,
-                imgUrl:"https://framerusercontent.com/images/hO1XlKc1bftv4Svxm3IlnjvFpE.png",
+                imgUrl:"https://framerusercontent.com/images/GPCZTysTLH8quaOvO4uju1Qztw.png",
 
             },
             {
                 id:4,
-                imgUrl:"https://framerusercontent.com/images/kit3wKUkURPGtEzXfaQFfXpHMw.png",
+                imgUrl:"https://framerusercontent.com/images/bznxPD0Q7m5MkI2uPnUEfunPI.png",
 
             },
         ]
