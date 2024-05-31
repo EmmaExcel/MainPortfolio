@@ -96,6 +96,13 @@ export const Services = () => {
             <p>N/A</p>
             <p>2022-2023</p>
           </motion.div>
+          <motion.div transition={{ duration: 0.7 , delay:1.5}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }} className="experienceList">
+            <p>Nutlip</p>
+            <p>United Kingdom</p>
+            <p>Nov2023-Mar2024</p>
+          </motion.div>
         </div>
       </section>
     </>
