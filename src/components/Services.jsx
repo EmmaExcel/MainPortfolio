@@ -84,27 +84,7 @@ export const Services = () => {
     },
 
   ];
-  const services = [
-    {
-      id: 1,
-      name: "Frontend Development",
-    },
-    {
-      id: 2,
-      name: "Performance & SEO  ",
-    },
 
-    {
-      id: 3,
-      name: "Accessibility",
-    },
-    {
-      id: 4,
-      name: "Testing and Debugging",
-    },
-
-
-  ];
   return (
     <>
       <section className="servicesSection">
