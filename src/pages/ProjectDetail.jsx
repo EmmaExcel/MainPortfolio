@@ -17,8 +17,9 @@ export const ProjectDetail = () => {
         <div className="projectHeader">
           <p>{project.title}</p>
           <div className="projectHeadLink">
-            <a href={project.path}>FULL CASE STUDY</a>
-            <a href={project.github}>GITHUB</a>
+            {project.path && <a href={project.path}>FULL CASE STUDY</a>}
+            {project.github && <a href={project.github}>GITHUB</a>}
+            {project.apk && <a href={project.apk}>APK</a>}
           </div>
         </div>
 
@@ -67,11 +68,11 @@ export const ProjectDetail = () => {
         </div>
 
         <div className="Projectnav">
-          
+
           {previousProject && (
             <Link to={`/projectdetail/${previousProject.id}`}>
               <div className="navButton">
-               
+
                 <p>{previousProject.title}</p>
                 <p> {"<"} PREVIOUS PROJECT </p>
               </div>

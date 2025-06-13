@@ -11,7 +11,7 @@ export const Works = () => {
         <div className="workContainer">
           <div className="workHeader">
             <p>SELECTED WORKS</p>
-            <p>{"(2021-2023)"}</p>
+            <p>{"(2021-2025)"}</p>
           </div>
 
           <div className="workListContainer">
@@ -25,7 +25,7 @@ export const Works = () => {
   );
 };
 
-const WorkBox = ({ id, work, img , title  }) => {
+const WorkBox = ({ id, work, img, title }) => {
   const [hover, setHover] = useState(false);
 
   const Mouseenter = () => {
