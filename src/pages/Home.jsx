@@ -5,40 +5,39 @@ export const Home = () => {
     <>
       <section className="homeSection">
         <div className="homeContainer">
-          
-            <motion.p
-                className="hometextone"
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.7 }}
-            >
-              FRONTEND DEVELOPER
-            </motion.p>
-          
+
+          <motion.p
+            className="hometextone"
+            initial={{ y: 20 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            SOFTWARE ENGINEER
+          </motion.p>
+
           <div className="hometexttwo">
             <motion.p
               initial={{ y: 70 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 1 }}
             >
-              <span>TRANSFORMING THE</span> DIGITAL WORLD <span>WITH </span>
-              EYE-CATCHING, INTERACTIVE EXPERIENCES.
+              <span>CRAFTING</span> SCALABLE SOLUTIONS <span>FOR </span>
+              WEB, MOBILE & INTELLIGENT AUTOMATION.
             </motion.p>
           </div>
 
-            <div className="hometextthree">
+          <div className="hometextthree">
             <motion.p
-                initial={{ y: 70, opacity:0 }}
-                animate={{ y: 0 ,opacity:1}}
-                transition={{ duration: 0.4 }}
+              initial={{ y: 70, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.7 }}
             >
-            Welcome to the world of Stunning Web Development, where ingenuity
-            and expertise entwine to create marvelous websites. Marvel at the
-            genius of an elite web developer and take a journey through a
-            universe of exquisite web apps for creatives, businesses, and
-            individuals alike.
-          </motion.p>
-            </div>
+              Welcome to my digital workspace, where fullstack expertise meets
+              cutting-edge technology. I specialize in crafting robust web applications,
+              intuitive mobile experiences, and intelligent automation solutions that
+              streamline workflows and drive business growth.
+            </motion.p>
+          </div>
         </div>
       </section>
     </>
