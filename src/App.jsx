@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar } from "./Components/Navbar";
+
 import { About } from "./components/About";
 
 import { Services } from "./components/Services";
@@ -10,7 +10,7 @@ import { Home } from "./pages/Home";
 function App() {
   return (
     <>
-      
+
       <Home />
       <Works />
       <Parallax />
