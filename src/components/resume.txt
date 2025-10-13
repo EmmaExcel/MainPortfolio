@@ -1,0 +1,42 @@
+Technical Skills
+Languages: JavaScript, TypeScript, Python
+Frameworks/Libraries: React, Next.js, Vue 3, React Native, Express, Node.js, Nest.js, Ionic
+State Management: Redux, Zustand, Vuex, Pinia, React Query
+Testing: Jest, Cypress, Playwright
+Tools & Platforms: Firebase, GraphQL (Apollo), MongoDB, Azure, Selenium, Socket.io
+Styling: Tailwind CSS, Headless UI, Radix UI
+Other: PWA, SSR, Responsive Design, Git, CI/CD
+
+Professional Experience
+Nutlip — Software Engineer / Technical Director
+Nov 2023 – Feb 2025
+- Migrated frontend to Next.js 15, boosting performance by 40% and improving type safety.
+- Led frontend architecture for a white-label real estate platform with SSR and accessibility compliance.
+- Integrated real-time data (Firebase, Socket.io) and built reusable UI components.
+- Collaborated with backend and blockchain teams, overseeing technical hiring and feature planning.
+
+ServiceMe — Mobile Software Engineer
+Aug 2024 – Jan 2025
+- Led the rebuild of the mobile app using React Native and Ionic, improving user experience across iOS and Android.
+- Delivered a PWA using Capacitor and React (TypeScript), achieving feature parity across devices.
+- Partnered with product teams to translate complex requirements into intuitive mobile experiences.
+
+Smiles Collection — Software Engineer
+Jun 2022 – Jan 2023
+- Developed e-commerce pages with Vue 3 and Tailwind CSS, ensuring responsiveness and modern UI/UX.
+- Collaborated directly with clients and resolved bugs under tight deadlines.
+
+Renbi Women — WordPress Developer
+Nov 2023 – Dec 2023
+- Redesigned site structure to improve performance.
+- Increased load speed by 30% and implemented mobile-first responsive design.
+
+Lucky Fibre Industry — Software Engineering Intern
+Jun 2024 – Nov 2024
+- Managed servers, Azure and SAP performance, and database optimization.
+- Resolved network issues and ensured system-wide integration and uptime.
+
+Ruvira - Zerah — Fullstack Developer
+May 2025 – Jul 2025
+- Built a therapy web app MVP in one week, fully functional with API and AI integration.
+- Collaborated with a fast-paced team in building the startup.

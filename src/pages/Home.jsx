@@ -32,10 +32,7 @@ export const Home = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.7 }}
             >
-              Welcome to my digital workspace, where fullstack expertise meets
-              cutting-edge technology. I specialize in crafting robust web applications,
-              intuitive mobile experiences, and intelligent automation solutions that
-              streamline workflows and drive business growth.
+              Welcome to my space on the web. I enjoy solving problems and learning while building. I focus on writing clean, efficient code and creating products that feel simple but work well.
             </motion.p>
           </div>
         </div>

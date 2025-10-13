@@ -13,7 +13,7 @@ function App() {
 
       <Home />
       <Works />
-      <Parallax />
+      {/* <Parallax /> */}
       <About />
       <Services />
     </>

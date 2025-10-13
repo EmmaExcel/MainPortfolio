@@ -9,7 +9,7 @@ export const Navbar = () => {
           <p>PORTFOLIO 2023</p>
         </div>
         <div className="navLink">
-          <a href="https://docs.google.com/document/d/1seVPcpl7XCzwfP76ukQOKnNWt15Q2q9_/edit?usp=sharing&ouid=116193675770949546523&rtpof=true&sd=true">RESUME</a>
+          <a href="https://drive.google.com/file/d/1aqIxhMl3whpZ0tw9ElewUr9RgJNj7fhp/view?usp=sharing">RESUME</a>
           <a href="/#works">WORKS</a>
           <a href="/#about">ABOUT</a>
           <a href="/#contact">CONTACT</a>

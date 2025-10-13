@@ -189,9 +189,50 @@
   width: 40%;
 }
 .aboutInfo p {
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 400;
+}
+.aim {
+  width: 40%;
+}
+.aim p {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  font-style: italic;
+  color: #5b5b5be7;
+}
+
+/* Responsive adjustments for Aim section */
+@media (780px <= width <= 1200px) {
+  .aim {
+    width: 60%;
+  }
+  .aim p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (400px <= width <= 780px) {
+  .aim {
+    width: 100%;
+  }
+  .aim p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (width <= 400px) {
+  .aim {
+    width: 100%;
+  }
+  .aim p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .aboutImg {
   height: 80%;
@@ -219,9 +260,11 @@
 
 .skill {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   height: 100%;
   width: 100%;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .skillHeader p {
@@ -233,14 +276,167 @@
 
 .skillList {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+
+/* Responsive adjustments for Skill list grid */
+@media (780px <= width <= 1200px) {
+  .skillList {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (400px <= width <= 780px) {
+  .skillList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (width <= 400px) {
+  .skillList {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Skill list actions */
+.skillActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.skillToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skillToggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.skillToggle:focus-visible {
+  outline: 2px solid rgba(0, 128, 255, 0.6);
+  outline-offset: 2px;
+}
+
+@media (width <= 780px) {
+  .skillActions {
+    margin-top: 10px;
+  }
+  .skillToggle {
+    padding: 9px 12px;
+  }
 }
 
 .skillList p {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Skill badge styling for improved UI */
+.skillList .skillBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  user-select: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Active highlight state for click feedback */
+.skillList .skillBadge.skillBadgeActive {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+/* Label layering above particles */
+.skillList .skillBadge .skillBadgeLabel {
+  position: relative;
+  z-index: 2;
+}
+
+/* Particle styling used by SkillBadge */
+.skillList .skillBadge .particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #9fd1ff, #4aa3ff 60%, rgba(74, 163, 255, 0) 100%);
+  opacity: 0.85;
+  pointer-events: none;
+  filter: blur(0.2px);
+  z-index: 1;
+  will-change: transform, opacity;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skillList .skillBadge {
+    transition: none;
+  }
+  .skillList .skillBadge .particle {
+    display: none;
+  }
+}
+
+.skillList .skillBadge:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.skillList .skillBadge:focus-visible {
+  outline: 2px solid rgba(0, 128, 255, 0.6);
+  outline-offset: 2px;
+}
+
+@media (width <= 400px) {
+  .skillList .skillBadge {
+    padding: 8px 12px;
+    border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+    font-size: 14px;
+  }
+}
+
+@media (400px <= width <= 780px) {
+  .skillList .skillBadge {
+    padding: 9px 12px;
+    font-size: 15px;
+  }
 }
 
 .services {
@@ -271,9 +467,10 @@
 
 .experience {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  justify-content: space-between;
+  justify-content: start;
   gap: 20px;
 }
 
@@ -377,6 +574,7 @@
 
 .contactLink {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -690,6 +888,9 @@
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
+  }
+  .aim{
+    width: 100%;
   }
 
   .aboutInfo {
@@ -1962,5 +2163,105 @@
     -moz-transition: 0.5s ease;
     -ms-transition: 0.5s ease;
     -o-transition: 0.5s ease;
+  }
+}
+
+.experienceCards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 25px;
+}
+
+.experienceCard {
+  background: rgba(30, 30, 30, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.041);
+  padding: 20px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.experienceCard:hover {
+  background: rgba(40, 40, 40, 0.85);
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.experienceCardHeader {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.experienceIcon {
+  height: 36px;
+  width: 36px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.experienceTitleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experienceTitle {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700; 
+}
+
+.badgeRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b3b3b3;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.experienceCompany {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+.experienceDescription {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.experienceLocation {
+  margin-top: 8px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+@media (width >= 780px) {
+  .experienceCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (width >= 1100px) {
+  .experienceCards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
