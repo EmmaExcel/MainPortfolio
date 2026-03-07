@@ -9,7 +9,7 @@ export const Navbar = () => {
           <p>PORTFOLIO 2023</p>
         </div>
         <div className="navLink">
-          <a href="https://drive.google.com/file/d/1aqIxhMl3whpZ0tw9ElewUr9RgJNj7fhp/view?usp=sharing">RESUME</a>
+          <a href="https://flowcv.com/resume/qjb61lq7p48j">RESUME</a>
           <a href="/#works">WORKS</a>
           <a href="/#about">ABOUT</a>
           <a href="/#contact">CONTACT</a>
