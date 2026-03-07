@@ -110,7 +110,7 @@ export const Services = () => {
     { id: 33, name: "CI/CD" },
   ];
 
-  // Mobile detection and toggle state for skill list
+
   const [isMobile, setIsMobile] = useState(false);
   const [expanded, setExpanded] = useState(false);
   useEffect(() => {
@@ -127,51 +127,66 @@ export const Services = () => {
 
   const experiences = [
     {
+      role: "Mobile Developer",
+      period: "Nov 2025 – Jan 2026",
+      company: "MyCity Logistics",
+      description:
+        "Spearheaded the entire product lifecycle of the MyCity Logistics mobile application from conceptualization to App Store deployment. Architected responsive, cross-platform layouts for iOS and Android using React Native and Expo. Managed platform-specific challenges including complex iOS/Android keyboard interactivity bugs.",
+      type: "Contract",
+      location: "Canada",
+    },
+    {
+      role: "Software Engineering Intern",
+      period: "Jun 2025 – Nov 2025",
+      company: "Tolaram",
+      description:
+        "Managed Azure servers, SAP integration, and system-wide database optimization. Installed and maintained network infrastructure including LAN cabling, mesh networks, and biometric systems. Developed an IoT-based product dispatch system using Raspberry Pi and a barcode scanner.",
+      type: "Internship",
+      location: "Lagos, NG",
+    },
+    {
+      role: "Fullstack Software Engineer",
+      period: "May 2025 – Sep 2025",
+      company: "Ruvira",
+      description:
+        "Designed and developed a therapy web app MVP in one week with API and AI integration. Engineered seamless data flow between frontend and backend, optimizing AI integration for fast, reliable performance.",
+      type: "Contract",
+      location: "NG",
+    },
+    {
       role: "Software Engineer / Technical Director",
-      period: "Nov 2023 – Feb 2025",
+      period: "Nov 2023 – Aug 2025",
       company: "Nutlip",
       description:
-        "Led frontend architecture for a white-label real estate platform; migrated to Next.js 15, boosting performance by 40% and improving type safety. Integrated real-time data (Firebase, Socket.io), built reusable UI components, and collaborated across backend and blockchain teams to support hiring and feature planning.",
+        "Led frontend and mobile architecture for a white-label real estate platform using Next.js and React Native. Migrated backend to NestJS. Integrated real-time data using Socket.io and oversaw technical hiring and sprint planning.",
       type: "Full-time",
+      location: "Leeds, UK",
     },
     {
       role: "Mobile Software Engineer",
-      period: "Aug 2024 – Jan 2025",
+      period: "Aug 2024 – Apr 2025",
       company: "ServiceMe",
       description:
-        "Rebuilt the mobile app with React Native and Ionic to improve UX on iOS and Android. Delivered a PWA with Capacitor and React (TypeScript), achieving feature parity across devices and partnering with product teams to translate complex requirements into intuitive experiences.",
+        "Migrated the ServiceMe app from Ionic to React Native, improving cross-platform performance. Implemented responsive UI patterns and integrated real-time updates with REST APIs. Built scalable APIs to automate payment processing.",
+      type: "Contract",
+      location: "Abuja, NG",
+    },
+    {
+      role: "Mobile Developer",
+      period: "Short-term Contract",
+      company: "COZA",
+      description:
+        "Completed a focused, short-term contract to update and stabilize a production mobile application. Audited the codebase to fix critical user-facing bugs, including \"ghost touch\" issues. Resolved iOS specific architectural and Xcode build issues, culminating in a stable Apple App Store redeployment.",
       type: "Contract",
     },
     {
       role: "Software Engineer",
-      period: "Jun 2022 – Jan 2023",
+      period: "Mar 2022 – Jan 2023",
       company: "Smiles Collection",
       description:
-        "Developed e-commerce pages with Vue 3 and Tailwind CSS, ensuring responsiveness and modern UI/UX. Collaborated directly with clients and resolved bugs under tight deadlines.",
+        "Built e-commerce interfaces using Vue.js and Tailwind CSS, improving user experience and site responsiveness across devices. Integrated APIs for product, cart, and order management, achieving faster load times.",
       type: "Full-time",
-    },
-    {
-      role: "WordPress Developer",
-      period: "Nov 2023 – Dec 2023",
-      company: "Renbi Women",
-      description:
-        "Redesigned site structure to improve performance, increased load speed by 30%, and implemented mobile-first responsive design.",
-      type: "Contract",
-    },
-    {
-      role: "Software Engineering Intern",
-      period: "Jun 2024 – Nov 2024",
-      company: "Lucky Fibre Industry",
-      description:
-        "Managed servers, Azure and SAP performance, and database optimization. Resolved network issues and ensured system-wide integration and uptime.",
-      type: "Internship",
-    },
-    {
-      role: "Fullstack Developer",
-      period: "May 2025 – Jul 2025",
-      company: "Ruvira - Zerah",
-      description:
-        "Built a therapy web app MVP in one week, fully functional with API and AI integration. Collaborated with a fast-paced team to build the startup.",
+      location: "Lagos, NG",
     },
   ];
 
@@ -202,7 +217,7 @@ export const Services = () => {
             </div>
           )}
         </div>
-   
+
 
         <div className="experience">
           <div className="experienceHeader">
@@ -224,7 +239,7 @@ export const Services = () => {
                   </div>
                   <div className="experienceTitleBlock">
                     <p className="experienceTitle">{exp.role}  {exp.type && <span className="badge">{exp.type}</span>} <span className="badge">{exp.period}</span>  </p>
-                  
+
                     <p className="experienceCompany">{exp.company}</p>
                   </div>
                 </div>

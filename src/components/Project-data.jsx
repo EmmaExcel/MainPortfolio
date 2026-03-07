@@ -1,6 +1,55 @@
 
 
 export const data = [
+    {
+        id: 11,
+        title: "MyCity Logistics",
+        path: '',
+        programs: "React Native Expo Node.js iOS Android",
+        img: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKhXtpYvU7DC7nqYwkIr56d3syZ8gchtPLMR9Ux",
+        desc: "A comprehensive logistics mobile application with dynamic order creation, persistent guest checkouts, and secure session management. Developed for both iOS and Android using React Native and Expo.",
+        year: 2026,
+        type: "Mobile App",
+        github: "",
+        detailImage: [
+            {
+                id: 1,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKhXtpYvU7DC7nqYwkIr56d3syZ8gchtPLMR9Ux",
+                isVideo: false
+            },
+            {
+                id: 2,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKhYGyVLOiXc8avnWZkh41GfCJsgwE3Oe2ruQIo",
+                isVideo: true
+            },
+            {
+                id: 3,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKh99Mz0c8keWN6sqCSrFd3Ky08HGDhltiVLu9U",
+                isVideo: false
+            },
+            {
+                id: 4,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKh0xkPk43EcK3gITsztYVBFuGeSQy5bZM8r9xW",
+                isVideo: true
+            },
+            {
+                id: 5,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKhnEIDYUdrpR5WsMbEdjOlGY74AKefJUam6q1h",
+                isVideo: false
+            },
+            {
+                id: 6,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKhZIggXQz31GJWyeLc6vV9uItP87srNQMbRUC5",
+                isVideo: false
+            },
+
+            {
+                id: 8,
+                imgUrl: "https://0yotmywn5o.ufs.sh/f/JnzLPyRyaGKh5FcMayf0ipSM6WdTgzDlOv3fEPhXmxqHwrF4",
+                isVideo: false
+            }
+        ]
+    },
 
     {
         id: 1,

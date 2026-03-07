@@ -49,21 +49,41 @@ export const ProjectDetail = () => {
 
         <div className="projectImage">
           {project.detailImage.map((image) => (
-            <>
-              <motion.img
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                variants={{
-                  visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 0, y: 30 },
-                }}
-                key={image?.id}
-                src={image?.imgUrl}
-                alt=""
-              />
-            </>
+            <div key={image?.id}>
+              {image?.isVideo ? (
+                <div style={{ width: "100%", display: "flex", justifyContent: "center", backgroundColor: "#000", borderRadius: "8px", overflow: "hidden" }}>
+                  <motion.video
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    variants={{
+                      visible: { opacity: 1, y: 0 },
+                      hidden: { opacity: 0, y: 30 },
+                    }}
+                    src={image?.imgUrl}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ maxHeight: "80vh", width: "auto", maxWidth: "100%", objectFit: "contain" }}
+                  />
+                </div>
+              ) : (
+                <motion.img
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  variants={{
+                    visible: { opacity: 1, y: 0 },
+                    hidden: { opacity: 0, y: 30 },
+                  }}
+                  src={image?.imgUrl}
+                  alt=""
+                />
+              )}
+            </div>
           ))}
         </div>
 

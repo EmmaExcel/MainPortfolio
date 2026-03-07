@@ -15,7 +15,7 @@ export const Works = () => {
           </div>
 
           <div className="workListContainer">
-            {data.map((work) => (
+            {[...data].sort((a, b) => a.id - b.id).map((work) => (
               <WorkBox key={work.id} work={work} id={work.id} img={work.img} title={work.title} />
             ))}
           </div>
