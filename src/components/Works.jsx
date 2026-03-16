@@ -1,6 +1,6 @@
 import { AiOutlineEye } from "react-icons/ai";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { data } from './Project-data';
 
@@ -15,8 +15,8 @@ export const Works = () => {
           </div>
 
           <div className="workListContainer">
-            {[...data].sort((a, b) => a.id - b.id).map((work) => (
-              <WorkBox key={work.id} work={work} id={work.id} img={work.img} title={work.title} />
+            {[...data].sort((a, b) => a.id - b.id).map((work, index) => (
+              <WorkBox key={work.id} work={work} id={work.id} img={work.img} title={work.title} index={index} />
             ))}
           </div>
         </div>
@@ -25,8 +25,11 @@ export const Works = () => {
   );
 };
 
-const WorkBox = ({ id, work, img, title }) => {
+const WorkBox = ({ id, work, img, title, index }) => {
   const [hover, setHover] = useState(false);
+  const ref = useRef(null);
+  
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const Mouseenter = () => {
     setHover(true);
@@ -38,14 +41,29 @@ const WorkBox = ({ id, work, img, title }) => {
 
   return (
     <motion.div
-      key={id}
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      animate={isInView ? "visible" : "hidden"}
       variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 20 },
+        visible: { 
+          opacity: 1, 
+          y: 0, 
+          scale: 1,
+          filter: "blur(0px)",
+          transition: { 
+            type: "tween", 
+            ease: "easeOut", 
+            duration: 0.8,
+            // Small delay based on index to create a staggered effect
+            delay: (index % 2) * 0.15 
+          }
+        },
+        hidden: { 
+          opacity: 0, 
+          y: 50, 
+          scale: 0.95,
+          filter: "blur(5px)"
+        },
       }}
       className="workBoxContainer"
     >
