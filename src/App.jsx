@@ -5,7 +5,7 @@ import { About } from "./components/About";
 
 import { Services } from "./components/Services";
 import { Works } from "./components/Works";
-import { Parallax } from "./components/parallax/parallax";
+// import { Parallax } from "./components/parallax/parallax";
 import { Home } from "./pages/Home";
 import { AIOverlay } from '@emmaexcel/shakecursor'
 
@@ -20,7 +20,7 @@ function App() {
       },
       editEnabled: true,
     })
-    return () => overlay.destroy();
+    return () => { if (AIOverlay.destroy) AIOverlay.destroy(); };
   }, []);
 
   return (

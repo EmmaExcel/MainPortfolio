@@ -1,7 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { data } from "../components/Project-data";
+import { useEffect } from "react";
 import "../components/components.css";
-import { motion } from "framer-motion";
+
 export const ProjectDetail = () => {
   const { id } = useParams();
   const projectId = parseInt(id);
@@ -11,103 +12,122 @@ export const ProjectDetail = () => {
   const previousProject = projectIndex > 0 ? data[projectIndex - 1] : null;
   const nextProject = projectIndex < data.length - 1 ? data[projectIndex + 1] : null;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [projectId]);
+
+  if (!project) return <div className="text-white text-center pt-32">Project not found</div>;
+
+  const programsArray = project.programs ? project.programs.split(/[, ]+/).filter(Boolean) : [];
+  
+  // Separate first image and the rest for the layout
+  const mainImage = project.detailImage?.[0];
+  const restImages = project.detailImage?.slice(1) || [];
+
   return (
-    <section className="projectSection">
-      <div className="projectContainer">
-        <div className="projectHeader">
-          <p>{project.title}</p>
-          <div className="projectHeadLink">
-            {project.path && <a href={project.path}>FULL CASE STUDY</a>}
-            {project.github && <a href={project.github}>GITHUB</a>}
-            {project.apk && <a href={project.apk}>APK</a>}
+    <>
+      <div className="fixed inset-0 w-full h-full precision-grid -z-10"></div>
+      
+      <main className="flex-grow relative z-10 pt-48 pb-margin-desktop md:pb-margin-desktop max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+        {/* Hero Title */}
+        <section className="mb-24 md:mb-32 fade-in-up">
+          <h1 className="font-display-xl text-[80px] md:text-[140px] lg:text-[180px] leading-[0.85] text-primary uppercase tracking-tighter max-w-full break-words">
+            {project.title}
+          </h1>
+          <div className="flex flex-wrap gap-4 mt-8">
+            {project.path && <a href={project.path} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">Full Case Study</a>}
+            {project.github && <a href={project.github} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">GitHub</a>}
+            {project.apk && <a href={project.apk} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">APK</a>}
           </div>
-        </div>
+        </section>
 
-        <div className="descBoxContainer">
-          <div className="descBox">
-            <p>DESCRIPTION</p>
-            <p>{project?.desc}</p>
+        {/* Description & Metadata */}
+        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24 border-t border-white/20 pt-16 fade-in-up">
+          <div className="md:col-span-6 lg:col-span-5">
+            <h3 className="font-label-caps text-label-caps text-on-surface-variant mb-6 uppercase tracking-widest">Description</h3>
+            <p className="font-body-lg text-body-lg text-primary text-balance">
+              {project.desc}
+            </p>
           </div>
-
-          <div className="projectInfo">
-            <div className="client">
-              <p>Client</p>
-              <p>{project.title}</p>
+          <div className="md:col-span-5 md:col-start-8 flex flex-col justify-end mt-12 md:mt-0">
+            <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">
+              <span className="font-body-md text-on-surface-variant">Client</span>
+              <span className="font-body-md text-primary font-bold">{project.title}</span>
             </div>
-
-            <div className="year">
-              <p>Year</p>
-              <p>{project?.year}</p>
+            <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">
+              <span className="font-body-md text-on-surface-variant">Year</span>
+              <span className="font-body-md text-primary font-bold">{project.year}</span>
             </div>
-
-            <div className="type">
-              <p>Type</p>
-              <p>{project?.type}</p>
+            <div className="flex justify-between items-end border-b border-white/20 pb-4">
+              <span className="font-body-md text-on-surface-variant">Type</span>
+              <span className="font-body-md text-primary font-bold">{project.type}</span>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="projectImage">
-          {project.detailImage.map((image) => (
-            <div key={image?.id}>
-              {image?.isVideo ? (
-                <div style={{ width: "100%", display: "flex", justifyContent: "center", backgroundColor: "#000", borderRadius: "8px", overflow: "hidden" }}>
-                  <motion.video
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    variants={{
-                      visible: { opacity: 1, y: 0 },
-                      hidden: { opacity: 0, y: 30 },
-                    }}
-                    src={image?.imgUrl}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{ maxHeight: "80vh", width: "auto", maxWidth: "100%", objectFit: "contain" }}
-                  />
+        {/* Main Showcase Image */}
+        {mainImage && (
+          <section className="w-full mb-32 fade-in-up">
+            {mainImage.isVideo ? (
+               <video src={mainImage.imgUrl} autoPlay loop muted playsInline className="w-full h-auto object-cover rounded-lg" />
+            ) : (
+               <img alt={project.title} className="w-full h-auto object-cover rounded-lg" src={mainImage.imgUrl} loading="eager" />
+            )}
+          </section>
+        )}
+
+        {/* Multi-layered Image Showcase */}
+        {restImages.length > 0 && (
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start mb-32">
+            {restImages.map((img, idx) => {
+              const isEven = idx % 2 === 0;
+              return (
+                <div key={img.id} className={`flex flex-col ${!isEven ? 'md:mt-32' : ''} fade-in-up`}>
+                  <div className={`overflow-hidden relative group rounded-lg ${isEven ? 'aspect-[4/5]' : 'aspect-square'}`}>
+                    {img.isVideo ? (
+                      <video src={img.imgUrl} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                    ) : (
+                      <img alt={`${project.title} ${idx}`} className="w-full h-full object-cover img-grayscale-hover" src={img.imgUrl} loading="lazy" />
+                    )}
+                  </div>
                 </div>
-              ) : (
-                <motion.img
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
-                  variants={{
-                    visible: { opacity: 1, y: 0 },
-                    hidden: { opacity: 0, y: 30 },
-                  }}
-                  src={image?.imgUrl}
-                  alt=""
-                />
-              )}
+              );
+            })}
+          </section>
+        )}
+
+        {/* Tech Stack Bento Grid */}
+        {programsArray.length > 0 && (
+          <section className="mb-32 fade-in-up">
+            <div className="border-t border-white/20 pt-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-gutter gap-y-12">
+                {programsArray.map((tech, index) => (
+                  <div key={index} className="flex flex-col">
+                    <span className="font-label-mono text-[10px] text-on-surface-variant uppercase tracking-widest mb-4">Technology</span>
+                    <span className="font-headline-md text-[24px] text-primary">{tech}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          </section>
+        )}
 
-        <div className="Projectnav">
-
-          {previousProject && (
-            <Link to={`/projectdetail/${previousProject.id}`}>
-              <div className="navButton">
-
-                <p>{previousProject.title}</p>
-                <p> {"<"} PREVIOUS PROJECT </p>
-              </div>
+        {/* Project Nav */}
+        <section className="flex justify-between items-center border-t border-white/20 pt-16 pb-16 fade-in-up">
+          {previousProject ? (
+            <Link to={`/projectdetail/${previousProject.id}`} className="group flex flex-col items-start">
+              <span className="font-label-mono text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 group-hover:text-primary transition-colors">Previous</span>
+              <span className="font-headline-md text-[20px] md:text-[32px] text-primary max-w-[200px] md:max-w-md truncate">{previousProject.title}</span>
             </Link>
-          )}
-          {nextProject && (
-            <Link to={`/projectdetail/${nextProject.id}`}>
-              <div className="navButton">
-                <p>{nextProject.title}</p>
-                <p>NEXT PROJECT {" >"}</p>
-              </div>
+          ) : <div />}
+          {nextProject ? (
+            <Link to={`/projectdetail/${nextProject.id}`} className="group flex flex-col items-end text-right">
+              <span className="font-label-mono text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 group-hover:text-primary transition-colors">Next</span>
+              <span className="font-headline-md text-[20px] md:text-[32px] text-primary max-w-[200px] md:max-w-md truncate">{nextProject.title}</span>
             </Link>
-          )}
-        </div>
-      </div>
-    </section>
+          ) : <div />}
+        </section>
+      </main>
+    </>
   );
 };

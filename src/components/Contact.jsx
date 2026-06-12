@@ -6,7 +6,7 @@ export const Contact = () => {
                 <div>
                     <h5 className="font-headline-md text-headline-md text-primary mb-6">CONTACT</h5>
                     <p className="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">
-                        Ready to bring your vision to life or just want to chat? Reach out, and let's create something memorable together. I'm here to listen, collaborate, and craft web app solutions that resonate.
+                        Ready to bring your vision to life or just want to chat? Reach out, and let&apos;s create something memorable together. I&apos;m here to listen, collaborate, and craft web app solutions that resonate.
                     </p>
                     <a className="font-label-mono text-label-mono text-primary hover:text-electric-blue transition-colors underline decoration-white/20 underline-offset-4" href="mailto:EXCELEMMA6@GMAIL.COM">EXCELEMMA6@GMAIL.COM</a>
                 </div>

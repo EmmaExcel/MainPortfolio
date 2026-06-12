@@ -2267,3 +2267,19 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.img-grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+.img-grayscale-hover:hover {
+  filter: grayscale(0%);
+}
+
+.precision-grid {
+  background-size: 40px 40px;
+  background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  pointer-events: none;
+}
