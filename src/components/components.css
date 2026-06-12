@@ -1,11 +1,11 @@
 .navContainer {
   display: flex;
   justify-content: space-between;
-  width: 96%;
-  padding: 20px 0px;
+  width: 100%;
+  padding: 20px 20px;
   align-items: center;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   z-index: 5;
 }
 
