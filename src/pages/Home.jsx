@@ -98,7 +98,7 @@ export const Home = () => {
 
   return (
     <section className="min-h-[819px] flex flex-col justify-center relative fade-in-up">
-      <p className="font-label-mono text-label-mono text-on-surface-variant mb-4 uppercase tracking-widest">Portfolio 2023</p>
+      <p className="font-label-mono text-label-mono text-on-surface-variant mb-4 uppercase tracking-widest">Portfolio 2026</p>
       <h1 className="font-display-xl text-display-xl text-primary font-extrabold tracking-tighter leading-none mb-8 max-w-6xl break-words md:text-[120px] text-headline-lg-mobile">
         FULL-STACK, MOBILE &amp; AI ENGINEER
       </h1>
