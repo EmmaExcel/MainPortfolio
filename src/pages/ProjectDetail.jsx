@@ -20,9 +20,7 @@ export const ProjectDetail = () => {
 
   const programsArray = project.programs ? project.programs.split(/[, ]+/).filter(Boolean) : [];
   
-  // Separate first image and the rest for the layout
-  const mainImage = project.detailImage?.[0];
-  const restImages = project.detailImage?.slice(1) || [];
+
 
   return (
     <>
@@ -35,7 +33,7 @@ export const ProjectDetail = () => {
             {project.title}
           </h1>
           <div className="flex flex-wrap gap-4 mt-8">
-            {project.path && <a href={project.path} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">Full Case Study</a>}
+            {project.path && <a href={project.path} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">{project.path.includes("npmjs.com") ? "NPM Package" : "Live Demo"}</a>}
             {project.github && <a href={project.github} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">GitHub</a>}
             {project.apk && <a href={project.apk} target="_blank" rel="noreferrer" className="font-label-mono text-[12px] text-on-surface-variant hover:text-primary uppercase tracking-widest border border-white/20 px-6 py-3 rounded-full hover:bg-white/5 transition-all">APK</a>}
           </div>
@@ -65,34 +63,18 @@ export const ProjectDetail = () => {
           </div>
         </section>
 
-        {/* Main Showcase Image */}
-        {mainImage && (
-          <section className="w-full mb-32 fade-in-up">
-            {mainImage.isVideo ? (
-               <video src={mainImage.imgUrl} autoPlay loop muted playsInline className="w-full h-auto object-cover rounded-lg" />
-            ) : (
-               <img alt={project.title} className="w-full h-auto object-cover rounded-lg" src={mainImage.imgUrl} loading="eager" />
-            )}
-          </section>
-        )}
-
-        {/* Multi-layered Image Showcase */}
-        {restImages.length > 0 && (
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start mb-32">
-            {restImages.map((img, idx) => {
-              const isEven = idx % 2 === 0;
-              return (
-                <div key={img.id} className={`flex flex-col ${!isEven ? 'md:mt-32' : ''} fade-in-up`}>
-                  <div className={`overflow-hidden relative group rounded-lg ${isEven ? 'aspect-[4/5]' : 'aspect-square'}`}>
-                    {img.isVideo ? (
-                      <video src={img.imgUrl} autoPlay loop muted playsInline className="w-full h-full object-cover" />
-                    ) : (
-                      <img alt={`${project.title} ${idx}`} className="w-full h-full object-cover img-grayscale-hover" src={img.imgUrl} loading="lazy" />
-                    )}
-                  </div>
-                </div>
-              );
-            })}
+        {/* Image Showcase */}
+        {project.detailImage?.length > 0 && (
+          <section className="flex flex-col gap-16 md:gap-32 mb-32">
+            {project.detailImage.map((img, idx) => (
+              <div key={img.id} className="w-full fade-in-up">
+                {img.isVideo ? (
+                  <video src={img.imgUrl} autoPlay loop muted playsInline className="w-full h-auto object-cover rounded-lg" />
+                ) : (
+                  <img alt={`${project.title} ${idx}`} className="w-full h-auto object-cover rounded-lg" src={img.imgUrl} loading={idx === 0 ? "eager" : "lazy"} />
+                )}
+              </div>
+            ))}
           </section>
         )}
 
