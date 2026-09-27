@@ -2,6 +2,113 @@
 
 export const data = [
     {
+        id: 18,
+        title: "Clerkstone",
+        path: 'https://clerk.excelemma.site/',
+        programs: "FastAPI Next.js PostgreSQL Python TypeScript React HL7-FHIR",
+        category: "fullstack",
+        img: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkU0WSw6u41DQe4n97BXTCmufNYdGZJgyHjqK2W",
+        desc: "Clerkstone ingests synthetic FHIR R4 patient records, validates them against HL7 FHIR UK Core profiles, stores them in a hybrid relational/JSONB PostgreSQL schema, and exposes a governed REST API and React clinical timeline, plus a deterministic data-quality gateway that detects and reports the kinds of defects that break real EPR migrations.",
+        year: 2026,
+        type: "HealthTech Web App",
+        github: "https://github.com/EmmaExcel/Clerkstone---FHIR-Clinical-Record-Data-Quality-Platform",
+        detailImage: [
+            {
+                id: 1,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkU0WSw6u41DQe4n97BXTCmufNYdGZJgyHjqK2W",
+                isVideo: false
+            },
+            {
+                id: 2,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUcT721hO5xBAqoOeJNHWGcphDPzyF5XjkQ71E",
+                isVideo: false
+            },
+            {
+                id: 3,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUciRFmu5xBAqoOeJNHWGcphDPzyF5XjkQ71EM",
+                isVideo: false
+            },
+            {
+                id: 4,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkU5YJh8QPt0AMsDFWKUBxvkhfLai4EyjZ7R3Ng",
+                isVideo: false
+            },
+            {
+                id: 5,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkU9vjtst7esHk6G7zOcMrvpZVjEfFXRPQLmh01",
+                isVideo: false
+            }
+        ]
+    },
+    {
+        id: 17,
+        title: "UK Public Data MCP Server",
+        path: 'https://uk-public-data-mcp-inspector.onrender.com/?MCP_PROXY_FULL_ADDRESS=https://uk-public-data-mcp-inspector.onrender.com&MCP_PROXY_AUTH_TOKEN=uk-public-data-demo',
+        programs: "TypeScript Node.js MCP Zod Docker Vitest REST-API",
+        category: "fullstack",
+        img: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUGJHihM3RUsE2cCJQpfFrl4g9Ob6VL0zMmd5G",
+        desc: "A production-grade Model Context Protocol (MCP) server providing structured tools for UK public datasets across postcodes.io, Companies House, NHS ODS, police.uk, and GOV.UK bank holidays. Features stdio and Streamable HTTP transports, sliding-window rate limiting, in-memory TTL caching, upstream circuit breaking, and resilient error recovery.",
+        year: 2026,
+        type: "MCP Server",
+        github: "https://github.com/EmmaExcel/UK-Public-Data-MCP-Server",
+        detailImage: [
+            {
+                id: 1,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUGJHihM3RUsE2cCJQpfFrl4g9Ob6VL0zMmd5G",
+                isVideo: false
+            },
+            {
+                id: 2,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkU8y9ZFSkO9gHDpYhwVP5ecnXU1yNSQlTdtzZi",
+                isVideo: false
+            }
+        ]
+    },
+    {
+        id: 16,
+        title: "UK PII Detector & Redactor",
+        path: 'https://uk-pii-detector-redactor.onrender.com',
+        programs: "Python FastAPI Presidio spaCy Docker TailwindCSS REST-API",
+        category: "fullstack",
+        img: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUKia31teozAkfVH5BT4SP0L1IrQGnDRx8YWsZ",
+        desc: "A privacy engine built with FastAPI, Microsoft Presidio, and spaCy to detect and redact sensitive UK personal data in free-text documents and batch CSV files. Features algorithmic validation for UK-specific identifiers, including Modulus 11 NHS numbers, HMRC National Insurance structures, BS 7666 postcodes, and UK telephone formats, generating audit-ready redacted records and zero-persistence sanitization.",
+        year: 2026,
+        type: "Privacy Web App",
+        github: "https://github.com/EmmaExcel/UK-PII-Detector-Redactor",
+        detailImage: [
+            {
+                id: 1,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUKia31teozAkfVH5BT4SP0L1IrQGnDRx8YWsZ",
+                isVideo: false
+            },
+            {
+                id: 2,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUNVS43uDS8oMwRCVgWYr6pFUa3BsDh5NXic4l",
+                isVideo: false
+            },
+            {
+                id: 3,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUyprZBNFm5cEZwWJQ6XPLT7I9rod80RhHUuk3",
+                isVideo: false
+            },
+            {
+                id: 4,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUYXR46MpCm3WkXnY9uiaBLP2RlKq0vgspyQEz",
+                isVideo: false
+            },
+            {
+                id: 5,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkU75sSkLwpzTkUMKJjdGmgsPRQEr326cqohZw8",
+                isVideo: false
+            },
+            {
+                id: 6,
+                imgUrl: "https://1jkhh7lm7s.ufs.sh/f/7ovaL0wpzTkUdBfI2KnLu8DgLhZrTP6XekpnyK3ENYO2am7w",
+                isVideo: false
+            }
+        ]
+    },
+    {
         id: 15,
         title: "Customer Support Chatbot",
         path: 'https://customersupportchatbot-ten.vercel.app/',
