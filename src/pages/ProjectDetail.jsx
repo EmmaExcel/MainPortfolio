@@ -49,7 +49,7 @@ export const ProjectDetail = () => {
           </div>
           <div className="md:col-span-5 md:col-start-8 flex flex-col justify-end mt-12 md:mt-0">
             <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">
-              <span className="font-body-md text-on-surface-variant">Client</span>
+              <span className="font-body-md text-on-surface-variant">Project</span>
               <span className="font-body-md text-primary font-bold">{project.title}</span>
             </div>
             <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">

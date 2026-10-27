@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Predator &amp; Prey">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10182b"/><stop offset="1" stop-color="#07101b"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#50d4a4" stop-opacity=".34"/><stop offset="1" stop-color="#50d4a4" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="800" fill="url(#bg)"/><circle cx="900" cy="250" r="480" fill="url(#glow)"/>
+<g stroke="#50d4a4" fill="none" stroke-width="4" opacity=".8"><circle cx="780" cy="270" r="160"/><circle cx="980" cy="340" r="110"/><path d="M690 250 785 160 860 290 760 360Z"/><path d="M960 270 1050 330 965 420 900 350Z"/><path d="M500 430 Q700 550 940 460"/></g>
+<rect x="60" y="70" width="160" height="4" fill="#50d4a4"/>
+<text x="60" y="610" fill="#f5f7fb" font-family="Arial,sans-serif" font-size="72" font-weight="700">Predator &amp; Prey</text>
+<text x="63" y="662" fill="#b5c3d2" font-family="Arial,sans-serif" font-size="27" letter-spacing="3">CO-EVOLUTION SIMULATION</text>
+</svg>

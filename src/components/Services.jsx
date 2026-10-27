@@ -1,14 +1,32 @@
 export const Services = () => {
   const experiences = [
     {
+      role: "Domain Expert, AI Training",
+      period: "Sep 2026 – Present",
+      company: "Ethos",
+      description: "Annotate data, chat conversations, and documents for AI training.",
+    },
+    {
+      role: "AI Evaluation and Data Annotation Contractor",
+      period: "2026 – Present",
+      company: "Aether",
+      description: "Evaluate AI responses against rubrics, annotate image, video, and audio data, and review ratings and labels for consistency.",
+    },
+    {
+      role: "Mobile Application Developer",
+      period: "May 2026 – Sep 2026",
+      company: "SOOAR",
+      description: "Designed and built a cross-platform education app with React Native and Expo, owning architecture, UI, and deployment pipelines.",
+    },
+    {
       role: "Mobile Developer",
-      period: "Nov 2025 – Jan 2026",
+      period: "Nov 2025 – Mar 2026",
       company: "MyCity Logistics",
       description: "Spearheaded the entire product lifecycle of the MyCity Logistics mobile application from conceptualization to App Store deployment. Architected responsive, cross-platform layouts for iOS and Android using React Native and Expo. Managed platform-specific challenges including complex iOS/Android keyboard interactivity bugs.",
     },
     {
       role: "Software Engineering Intern",
-      period: "Jun 2025 – Nov 2025",
+      period: "May 2025 – Nov 2025",
       company: "Tolaram",
       description: "Managed Azure servers, SAP integration, and system-wide database optimization. Installed and maintained network infrastructure including LAN cabling, mesh networks, and biometric systems. Developed an IoT-based product dispatch system using Raspberry Pi and a barcode scanner.",
     },
@@ -82,11 +100,11 @@ export const Services = () => {
             </div>
             <h3 className="font-headline-md text-headline-md text-primary text-2xl tracking-tight">AI &amp; Machine Learning</h3>
             <p className="font-body-md text-body-md text-on-surface-variant flex-grow">
-              Integrating intelligence into applications. From custom model fine-tuning to leveraging massive LLMs for generative workflows.
+              Training and evaluating models, then connecting them to useful applications and reliable data workflows.
             </p>
             <div className="flex flex-wrap gap-2 pt-4">
               <span className="font-label-mono text-label-mono text-primary bg-surface-elevated px-3 py-1 rounded-full border border-white/5">PyTorch</span>
-              <span className="font-label-mono text-label-mono text-primary bg-surface-elevated px-3 py-1 rounded-full border border-white/5">TensorFlow</span>
+              <span className="font-label-mono text-label-mono text-primary bg-surface-elevated px-3 py-1 rounded-full border border-white/5">MCTS</span>
               <span className="font-label-mono text-label-mono text-primary bg-surface-elevated px-3 py-1 rounded-full border border-white/5">LLMs</span>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { data } from './Project-data';
 
 export const Works = () => {
+  const aiProjects = data.filter(p => p.category === "ai-ml");
   const fullstackProjects = data.filter(p => p.category === "fullstack");
   const frontendProjects = data.filter(p => p.category === "frontend");
 
@@ -63,7 +64,16 @@ export const Works = () => {
   return (
     <>
       <section id="works" className="flex justify-between items-end mb-12 border-b border-white/10 pb-4 fade-in-up">
-        <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">Selected Works</h3>
+        <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">AI, ML & Data</h3>
+        <span className="font-headline-md text-headline-md text-on-surface-variant">(2026)</span>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-32">
+        {aiProjects.map((work, index) => renderCard(work, index))}
+      </section>
+
+      <section id="product-works" className="flex justify-between items-end mb-12 border-b border-white/10 pb-4 fade-in-up">
+        <h3 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">Products & Platforms</h3>
         <span className="font-headline-md text-headline-md text-on-surface-variant">(2021-2026)</span>
       </section>
 

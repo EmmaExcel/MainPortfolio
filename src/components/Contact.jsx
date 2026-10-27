@@ -14,8 +14,8 @@ export const Contact = () => {
                     <div className="flex flex-wrap gap-6 mb-12 md:mb-0">
                         <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="https://github.com/EmmaExcel">Github</a>
                         <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="https://twitter.com/Oppai_senpai6">Twitter</a>
-                        <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="https://linkedin.com/in/excel-emma-457b61201">Linkedin</a>
-                        <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="https://flowcv.com/resume/qjb61lq7p48j">Resume</a>
+                        <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="https://linkedin.com/in/excel-emma-okerhe-457b61201">Linkedin</a>
+                        <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="/Excel_Emma-Okerhe_CV.pdf" target="_blank" rel="noreferrer">Resume</a>
                         <a className="font-label-mono text-label-mono text-on-surface-variant hover:text-secondary-container transition-colors hover:opacity-80" href="mailto:excelemma6@gmail.com">Mail</a>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ export const Contact = () => {
                     EXCEL
                  </div>
                 <div className="font-body-md text-body-md text-on-surface-variant text-sm">
-                    © 2024 EXCEL. ALL RIGHTS RESERVED.
+                    © 2026 EXCEL. ALL RIGHTS RESERVED.
                  </div>
             </div>
         </div>

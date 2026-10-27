@@ -107,7 +107,7 @@ export const Home = () => {
       </h2>
       <div className="max-w-lg mb-16">
         <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-          Welcome to my space on the web. I enjoy solving problems and learning while building. I focus on writing clean, efficient code and creating products that feel simple but work well.
+          I build AI and data products, from PyTorch models and evaluation pipelines to the interfaces and APIs that put them to work. I&apos;m studying for an MSc in Artificial Intelligence and Data Science at the University of Hull.
         </p>
       </div>
 
